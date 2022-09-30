@@ -1,0 +1,15 @@
+{
+  "name": "vocabulary",
+  "version": "1.0.0",
+  "description": "vocabulary trainer app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vocabulary",
+    "javascript"
+  ],
+  "author": "Artur Abdullin",
+  "license": "ISC"
+}
