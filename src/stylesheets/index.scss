@@ -1,0 +1,184 @@
+$accent-color: #5f32de;
+$accent-hover-color: rgba(95, 50, 222, 0.85);
+$accent-active-color: #4521ac;
+$text-color: #3b3d3e;
+$hard-color: #1e1e1e;
+$disabled-color: #acacac;
+$delete-color: #de3232;
+
+$p1: 24px;
+$p2: 20px;
+
+@font-face {
+  font-family: 'Fifaks';
+  src: url('/src/font/Fifaks10Dev1.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-out;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: 'Fifaks';
+  color: $text-color;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 300px));
+  grid-column-gap: 60px;
+}
+
+.header {
+  margin: 50px auto 150px;
+
+  .navigation {
+    display: flex;
+    a {
+      margin-left: 40px;
+    }
+  }
+}
+
+.link {
+  font-size: $p1;
+  text-decoration: none;
+
+  &:active {
+    color: $accent-active-color;
+  }
+
+  &.active {
+    color: $accent-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $accent-hover-color;
+      text-decoration: underline;
+    }
+  }
+
+  &.disabled {
+    color: $disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.form {
+  border-left: 1px solid $accent-color;
+  display: flex;
+}
+
+.input {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  border: none;
+  width: 320px;
+
+  color: $text-color;
+
+  font: {
+    family: 'Fifaks';
+    size: $p1;
+  }
+}
+
+.button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+
+  color: white;
+  background-color: $accent-color;
+
+  font: {
+    family: 'Fifaks';
+    size: $p1;
+  }
+
+  &:hover {
+    background-color: $accent-hover-color;
+  }
+
+  &:active {
+    background-color: $accent-active-color;
+  }
+
+  &.delete {
+    background-color: $delete-color;
+  }
+
+  &.disabled {
+    color: white;
+    background-color: $disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.table {
+  margin: 50px auto;
+  max-height: 290px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  border-top: 1px solid $accent-color;
+
+  table {
+    border-collapse: collapse;
+
+    .sticky {
+      position: sticky;
+      top: 0;
+    }
+
+    thead {
+      td {
+        color: $hard-color;
+        font-size: $p1;
+
+        &:nth-child(1) {
+          margin-left: 20px;
+        }
+
+        margin: 20px 20px 20px 0;
+      }
+    }
+
+    tbody {
+      td {
+        color: $text-color;
+        font-size: $p1;
+
+        &:nth-child(1) {
+          margin-left: 20px;
+        }
+
+        margin: 10px 10px 10px 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 4px 25px rgba(95, 50, 222, 0.25);
+      }
+    }
+  }
+}

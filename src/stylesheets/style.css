@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Fifaks";
+  src: url("/src/font/Fifaks10Dev1.ttf");
+}
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-out;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: "Fifaks";
+  color: #3b3d3e;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 300px));
+  grid-column-gap: 60px;
+}
+
+.header {
+  margin: 50px auto 150px;
+}
+.header .navigation {
+  display: flex;
+}
+.header .navigation a {
+  margin-left: 40px;
+}
+
+.link {
+  font-size: 24px;
+  text-decoration: none;
+}
+.link:active {
+  color: #4521ac;
+}
+.link.active {
+  color: #5f32de;
+  cursor: pointer;
+}
+.link.active:hover {
+  color: rgba(95, 50, 222, 0.85);
+  text-decoration: underline;
+}
+.link.disabled {
+  color: #acacac;
+  pointer-events: none;
+  cursor: default;
+}
+
+.form {
+  border-left: 1px solid #5f32de;
+  display: flex;
+}
+
+.input {
+  margin-left: 20px;
+  margin-right: 20px;
+  border: none;
+  width: 320px;
+  color: #3b3d3e;
+  font-family: "Fifaks";
+  font-size: 24px;
+}
+
+.button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #5f32de;
+  font-family: "Fifaks";
+  font-size: 24px;
+}
+.button:hover {
+  background-color: rgba(95, 50, 222, 0.85);
+}
+.button:active {
+  background-color: #4521ac;
+}
+.button.delete {
+  background-color: #de3232;
+}
+.button.disabled {
+  color: white;
+  background-color: #acacac;
+  pointer-events: none;
+  cursor: default;
+}
+
+.table {
+  margin: 50px auto;
+  max-height: 290px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-top: 1px solid #5f32de;
+}
+.table table {
+  border-collapse: collapse;
+}
+.table table .sticky {
+  position: sticky;
+  top: 0;
+}
+.table table thead td {
+  color: #1e1e1e;
+  font-size: 24px;
+  margin: 20px 20px 20px 0;
+}
+.table table thead td:nth-child(1) {
+  margin-left: 20px;
+}
+.table table tbody td {
+  color: #3b3d3e;
+  font-size: 24px;
+  margin: 10px 10px 10px 0;
+}
+.table table tbody td:nth-child(1) {
+  margin-left: 20px;
+}
+.table table tbody:hover {
+  cursor: pointer;
+  box-shadow: 0px 4px 25px rgba(95, 50, 222, 0.25);
+}
+
+/*# sourceMappingURL=style.css.map */

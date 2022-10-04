@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/stylesheets/style.css">
+    <!-- <script src="script.js" defer></script> -->
+
+    <title>Vocabulary</title>
+</head>
+
+<body>
+    <!-- header module -->
+    <header class="header container">
+        <div class="wrapper">
+            <h1 class="h1">Vocabulary</h1>
+            <nav class="navigation">
+                <a href="#"><img src="/src/img/night-mode.svg" alt="Включить ночную тему"></a>
+                <a class="link active" href="#">Словарь</a>
+                <a class="link disabled" href="#">Тренировка</a>
+                <a class="link disabled" href="#">Статистика</a>
+            </nav>
+        </div>
+    </header>
+    <!-- search module -->
+    <section class="search container">
+        <div class="wrapper">
+            <form class="form" action="#" method="get">
+                <input class="input" type="text" placeholder="Начните писать слово...">
+                <button class="button">Найти</button>
+            </form>
+        </div>
+    </section>
+    <!-- table module -->
+    <section class="table container">
+        <table>
+            <thead class="sticky">
+                <tr class="grid">
+                    <td class="title">Слово</td>
+                    <td class="title">Перевод</td>
+                    <td class="title">Часть речи</td>
+                </tr>
+            </thead>
+
+            <tbody class="tbody">
+                <tr class="grid">
+                    <td class="eng">Hello</td>
+                    <td class="rus">Привет</td>
+                    <td class="pos">Существительное</td>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody">
+                <tr class="grid">
+                    <td class="eng">Hello</td>
+                    <td class="rus">Привет</td>
+                    <td class="pos">Существительное</td>
+                </tr>
+            </tbody>
+
+            <tbody class="tbody">
+                <tr class="grid">
+                    <td>
+                        <span class="link active">Добавить</span> ещё слово?
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>
