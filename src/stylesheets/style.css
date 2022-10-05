@@ -43,25 +43,25 @@ body {
   margin-left: 40px;
 }
 
-.link {
+.nav__link {
   font-size: 24px;
   text-decoration: none;
 }
-.link:active {
-  color: #4521ac;
-}
-.link.active {
-  color: #5f32de;
-  cursor: pointer;
-}
-.link.active:hover {
-  color: rgba(95, 50, 222, 0.85);
-  text-decoration: underline;
-}
-.link.disabled {
+.nav__link--disabled {
   color: #acacac;
   pointer-events: none;
   cursor: default;
+}
+.nav__link--active {
+  color: #5f32de;
+  cursor: pointer;
+}
+.nav__link:active {
+  color: rgba(95, 50, 222, 0.85);
+}
+.nav__link:hover {
+  color: #4521ac;
+  text-decoration: underline;
 }
 
 .form {
@@ -89,10 +89,10 @@ body {
   font-size: 24px;
 }
 .button:hover {
-  background-color: rgba(95, 50, 222, 0.85);
+  background-color: #4521ac;
 }
 .button:active {
-  background-color: #4521ac;
+  background-color: rgba(95, 50, 222, 0.85);
 }
 .button.delete {
   background-color: #de3232;

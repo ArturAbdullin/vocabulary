@@ -1,6 +1,6 @@
 $accent-color: #5f32de;
-$accent-hover-color: rgba(95, 50, 222, 0.85);
-$accent-active-color: #4521ac;
+$accent-active-color: rgba(95, 50, 222, 0.85);
+$accent-hover-color: #4521ac;
 $text-color: #3b3d3e;
 $hard-color: #1e1e1e;
 $disabled-color: #acacac;
@@ -56,28 +56,30 @@ body {
   }
 }
 
-.link {
-  font-size: $p1;
-  text-decoration: none;
+.nav {
+  &__link {
+    font-size: $p1;
+    text-decoration: none;
 
-  &:active {
-    color: $accent-active-color;
-  }
+    &--disabled {
+      color: $disabled-color;
+      pointer-events: none;
+      cursor: default;
+    }
 
-  &.active {
-    color: $accent-color;
-    cursor: pointer;
+    &--active {
+      color: $accent-color;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: $accent-active-color;
+    }
 
     &:hover {
       color: $accent-hover-color;
       text-decoration: underline;
     }
-  }
-
-  &.disabled {
-    color: $disabled-color;
-    pointer-events: none;
-    cursor: default;
   }
 }
 
