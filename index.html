@@ -29,7 +29,7 @@
     <section class="search container">
         <div class="wrapper">
             <form class="searh-form form" action="#" method="get">
-                <input class="input" type="text" placeholder="Начните писать слово...">
+                <input class="search-form__input input" type="text" placeholder="Начните писать слово...">
                 <button class="button">Найти</button>
             </form>
         </div>
@@ -37,38 +37,70 @@
     <!-- table module -->
     <section class="table container">
         <table>
-            <thead class="sticky">
+            <thead class="thead sticky">
                 <tr class="grid">
-                    <td class="title">Слово</td>
-                    <td class="title">Перевод</td>
-                    <td class="title">Часть речи</td>
+                    <td class="thead__title">Слово</td>
+                    <td class="thead__title">Перевод</td>
+                    <td class="thead__title">Часть речи</td>
                 </tr>
             </thead>
 
             <tbody class="tbody">
                 <tr class="grid">
-                    <td class="eng">Hello</td>
-                    <td class="rus">Привет</td>
-                    <td class="pos">Существительное</td>
+                    <td class="tbody__word eng">Hello</td>
+                    <td class="tbody__word rus">Привет</td>
+                    <td class="tbody__word pos">Существительное</td>
                 </tr>
             </tbody>
 
             <tbody class="tbody">
                 <tr class="grid">
-                    <td class="eng">Hello</td>
-                    <td class="rus">Привет</td>
-                    <td class="pos">Существительное</td>
+                    <td class="tbody__word eng">Hello</td>
+                    <td class="tbody__word rus">Привет</td>
+                    <td class="tbody__word pos">Существительное</td>
                 </tr>
             </tbody>
 
             <tbody class="tbody">
                 <tr class="grid">
-                    <td>
+                    <td class="tbody__word">
                         <span class="link active">Добавить</span> ещё слово?
                     </td>
                 </tr>
             </tbody>
         </table>
+    </section>
+    <!-- modal module -->
+    <section class="fixed-overlay fixed-overlay__modal hidden">
+        <div class="modal modal-create">
+            <div class="grid">
+                <p class="grid-title label">Для редактирования измените значения</p>
+                <form class="grid-form form">
+                    <label class="label" for="word">Слово</label>
+                    <input class="input" type="text" id="word" name="word" value="Hello" required>
+                </form>
+
+                <form class="grid-form form" action="#" method="get">
+                    <label class="label" for="translate">Перевод</label>
+                    <input class="input" type="text" id="translate" name="translate" value="Привет, Приветствую"
+                        required>
+                </form>
+
+                <form class="grid-form form" action="#" method="get">
+                    <label class="label" for="pos">Часть речи</label>
+                    <input class="input" type="text" id="pos" name="pos" placeholder="Существительное" list="poslist">
+                    <datalist id="poslist">
+                        <option value="Существительное">
+                        <option value="Прилагательное">
+                        <option value="Глагол">
+                        <option value="Наречие">
+                    </datalist>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal modal-edit">
+        </div>
     </section>
 </body>
 
