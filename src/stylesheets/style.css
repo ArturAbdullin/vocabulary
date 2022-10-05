@@ -65,8 +65,10 @@ body {
 }
 
 .form {
-  border-left: 1px solid #5f32de;
   display: flex;
+}
+.form:focus-within {
+  border-left: 1px solid #5f32de;
 }
 
 .input {
@@ -94,11 +96,16 @@ body {
 .button:active {
   background-color: rgba(95, 50, 222, 0.85);
 }
-.button.delete {
+.button--delete {
   background-color: #de3232;
 }
-.button.disabled {
-  color: white;
+.button--delete:hover {
+  background-color: #ee1414;
+}
+.button--delete:active {
+  background-color: rgba(222, 50, 50, 0.85);
+}
+.button--disabled {
   background-color: #acacac;
   pointer-events: none;
   cursor: default;

@@ -5,6 +5,8 @@ $text-color: #3b3d3e;
 $hard-color: #1e1e1e;
 $disabled-color: #acacac;
 $delete-color: #de3232;
+$delete-active-color: rgba(222, 50, 50, 0.85);
+$delete-hover-color: #ee1414;
 
 $p1: 24px;
 $p2: 20px;
@@ -84,7 +86,9 @@ body {
 }
 
 .form {
-  border-left: 1px solid $accent-color;
+  &:focus-within {
+    border-left: 1px solid $accent-color;
+  }
   display: flex;
 }
 
@@ -124,12 +128,19 @@ body {
     background-color: $accent-active-color;
   }
 
-  &.delete {
+  &--delete {
     background-color: $delete-color;
+
+    &:hover {
+      background-color: $delete-hover-color;
+    }
+
+    &:active {
+      background-color: $delete-active-color;
+    }
   }
 
-  &.disabled {
-    color: white;
+  &--disabled {
     background-color: $disabled-color;
     pointer-events: none;
     cursor: default;
