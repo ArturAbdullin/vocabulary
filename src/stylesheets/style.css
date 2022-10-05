@@ -12,7 +12,7 @@
 
 body {
   font-family: "Fifaks";
-  color: #3b3d3e;
+  color: #4c4f50;
   margin: 0 auto;
 }
 
@@ -30,11 +30,18 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(150px, 300px));
-  grid-column-gap: 60px;
+  gap: 60px 60px;
+}
+
+.hidden {
+  display: none;
 }
 
 .header {
   margin: 50px auto 150px;
+}
+.header .h1 {
+  color: #5f32de;
 }
 .header__navigation {
   display: flex;
@@ -70,13 +77,17 @@ body {
 }
 
 .input {
-  margin-left: 20px;
-  margin-right: 20px;
   border: none;
-  width: 320px;
-  color: #3b3d3e;
+  color: #4c4f50;
+  background: transparent;
   font-family: "Fifaks";
   font-size: 24px;
+}
+
+.search-form__input {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 320px;
 }
 
 .button {
@@ -123,25 +134,80 @@ body {
   position: sticky;
   top: 0;
 }
-.table table thead td {
+.table table .thead__title {
   color: #1e1e1e;
   font-size: 24px;
   margin: 20px 20px 20px 0;
 }
-.table table thead td:nth-child(1) {
+.table table .thead__title:nth-child(1) {
   margin-left: 20px;
 }
-.table table tbody td {
-  color: #3b3d3e;
+.table table .tbody__word {
+  color: #4c4f50;
   font-size: 24px;
   margin: 10px 10px 10px 0;
 }
-.table table tbody td:nth-child(1) {
+.table table .tbody__word:nth-child(1) {
   margin-left: 20px;
 }
-.table table tbody:hover {
+.table table .tbody:hover {
   cursor: pointer;
   box-shadow: 0px 4px 25px rgba(95, 50, 222, 0.25);
+}
+
+/* modal overlay */
+.fixed-overlay {
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fixed-overlay__modal {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fixed-overlay__modal::after {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+  content: "";
+}
+
+/* modal overlay */
+.modal {
+  display: inline-block;
+  vertical-align: middle;
+}
+.modal .grid-title {
+  grid-row: span 2;
+}
+.modal .label {
+  color: #1e1e1e;
+}
+
+.modal-create {
+  color: #4c4f50;
+  font-size: 24px;
+  text-align: left;
+  margin: 50px;
+  padding: 50px;
+  white-space: normal;
+  background-color: #fff;
+}
+.modal-create .grid-form {
+  display: grid;
+  gap: 60px;
+  grid-column: 2/4;
+  grid-template-columns: repeat(2, minmax(150px, 300px));
+}
+.modal-create .grid-form .label {
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

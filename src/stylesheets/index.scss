@@ -1,7 +1,7 @@
 $accent-color: #5f32de;
 $accent-active-color: rgba(95, 50, 222, 0.85);
 $accent-hover-color: #4521ac;
-$text-color: #3b3d3e;
+$text-color: #4c4f50;
 $hard-color: #1e1e1e;
 $disabled-color: #acacac;
 $delete-color: #de3232;
@@ -44,11 +44,19 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(150px, 300px));
-  grid-column-gap: 60px;
+  gap: 60px 60px;
+}
+
+.hidden {
+  display: none;
 }
 
 .header {
   margin: 50px auto 150px;
+
+  .h1 {
+    color: $accent-color;
+  }
 
   &__navigation {
     display: flex;
@@ -91,18 +99,21 @@ body {
 }
 
 .input {
-  margin-left: 20px;
-  margin-right: 20px;
-
   border: none;
-  width: 320px;
 
   color: $text-color;
+  background: transparent;
 
   font: {
     family: 'Fifaks';
     size: $p1;
   }
+}
+
+.search-form__input {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 320px;
 }
 
 .button {
@@ -161,8 +172,8 @@ body {
       top: 0;
     }
 
-    thead {
-      td {
+    .thead {
+      &__title {
         color: $hard-color;
         font-size: $p1;
 
@@ -174,8 +185,8 @@ body {
       }
     }
 
-    tbody {
-      td {
+    .tbody {
+      &__word {
         color: $text-color;
         font-size: $p1;
 
@@ -190,6 +201,70 @@ body {
         cursor: pointer;
         box-shadow: 0px 4px 25px rgba(95, 50, 222, 0.25);
       }
+    }
+  }
+}
+
+/* modal overlay */
+
+.fixed-overlay {
+  position: fixed;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fixed-overlay__modal {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fixed-overlay__modal::after {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+  content: '';
+}
+
+/* modal overlay */
+
+.modal {
+  display: inline-block;
+  vertical-align: middle;
+
+  .grid-title {
+    grid-row: span 2;
+  }
+
+  .label {
+    color: $hard-color;
+  }
+}
+
+.modal-create {
+  color: $text-color;
+  font-size: $p1;
+  text-align: left;
+
+  margin: 50px;
+  padding: 50px;
+
+  white-space: normal;
+  background-color: #fff;
+
+  .grid-form {
+    display: grid;
+    gap: 60px;
+
+    grid-column: 2 / 4;
+    grid-template-columns: repeat(2, minmax(150px, 300px));
+
+    .label {
+      margin-left: 20px;
     }
   }
 }
