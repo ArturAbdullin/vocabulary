@@ -50,11 +50,8 @@ body {
 .header {
   margin: 50px auto 150px;
 
-  .navigation {
+  &__navigation {
     display: flex;
-    a {
-      margin-left: 40px;
-    }
   }
 }
 
@@ -62,6 +59,7 @@ body {
   &__link {
     font-size: $p1;
     text-decoration: none;
+    margin-left: 40px;
 
     &--disabled {
       color: $disabled-color;

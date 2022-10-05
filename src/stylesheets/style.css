@@ -36,16 +36,14 @@ body {
 .header {
   margin: 50px auto 150px;
 }
-.header .navigation {
+.header__navigation {
   display: flex;
-}
-.header .navigation a {
-  margin-left: 40px;
 }
 
 .nav__link {
   font-size: 24px;
   text-decoration: none;
+  margin-left: 40px;
 }
 .nav__link--disabled {
   color: #acacac;
